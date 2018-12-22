@@ -1,0 +1,6 @@
+resolver: nightly-2018-12-22
+packages:
+- .
+nix:
+    enable: false
+allow-newer: true
