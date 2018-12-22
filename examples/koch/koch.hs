@@ -1,4 +1,4 @@
-import           Diagram.Test (diagram)
+import           Diagram.Koch (diagram)
 import           Diagrams.Backend.SVG.CmdLine (mainWith)
 
 main :: IO ()
