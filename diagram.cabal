@@ -8,16 +8,28 @@ license-file:        LICENSE
 library
   hs-source-dirs:      src
   exposed-modules:     Diagram.Koch
+                     , Diagram.Labyrinth
                      , Diagram.Sierpinski
   build-depends:       base >= 4.7 && < 5
+                     , containers
                      , diagrams-lib
                      , diagrams-svg
+                     , MonadRandom
   default-language:    Haskell2010
   ghc-options:         -Wall
 
 executable koch
   hs-source-dirs:      examples
   main-is:             koch.hs
+  build-depends:       base >= 4.7 && < 5
+                     , diagram
+                     , diagrams-svg
+  ghc-options:         -Wall -O2
+  default-language:    Haskell2010
+
+executable labyrinth
+  hs-source-dirs:      examples
+  main-is:             labyrinth.hs
   build-depends:       base >= 4.7 && < 5
                      , diagram
                      , diagrams-svg
