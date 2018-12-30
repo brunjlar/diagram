@@ -7,7 +7,8 @@ license-file:        LICENSE
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Diagram.Koch
+  exposed-modules:     Diagram.Knot
+                     , Diagram.Koch
                      , Diagram.Labyrinth
                      , Diagram.Sierpinski
   build-depends:       base >= 4.7 && < 5
@@ -17,6 +18,15 @@ library
                      , MonadRandom
   default-language:    Haskell2010
   ghc-options:         -Wall
+
+executable knot
+  hs-source-dirs:      examples
+  main-is:             knot.hs
+  build-depends:       base >= 4.7 && < 5
+                     , diagram
+                     , diagrams-svg
+  ghc-options:         -Wall -O2
+  default-language:    Haskell2010
 
 executable koch
   hs-source-dirs:      examples
